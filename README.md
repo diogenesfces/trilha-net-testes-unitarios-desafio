@@ -68,5 +68,5 @@ Classe responsável por realizar os testes da classe ValidacoesString.
 O projeto está estruturado da seguinte maneira:
 
 ![Métodos Swagger](Imagens/projeto.png)
-![Métodos Swagger](Imagens/Captura de tela de Tests.png)
+![Captura Test](Imagens/Teste.png)
 
