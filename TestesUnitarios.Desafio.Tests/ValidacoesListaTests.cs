@@ -43,9 +43,10 @@ public class ValidacoesListaTests
         var lista = new List<int> { 5, -1, -8, 9 };
         var numeroParaProcurar = 10;
 
-        // Act
-
+        // Act ListaContemDeterminadoNumero
+        var resultado = _validacoes.ListaContemDeterminadoNumero(lista, numeroParaProcurar);
         // Assert
+        Assert.True(resultado);
     }
 
     //TODO: Corrigir a anotação [Fact]
