@@ -2,21 +2,12 @@
 www.dio.me
 
 ## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de Testes Unitários com C#, da trilha .NET da DIO.
-
-## Contexto
-Você está trabalhando em um sistema, e seus gestores relataram que frequentemente há problemas no software: bugs, funcionalidades que estavam funcionando de repente não funcionam mais, problemas de validações, entre outros. Os clientes já começam a duvidar da qualidade do código.
-
-Feito isso, você sugeriu a implementação de testes unitários: escrever testes cobrindo as partes mais críticas do sistema, com cenários positivos e negativos, a fim de ter uma rastreabilidade e controle do código, melhorando assim a qualidade desse sistema.
-
-Os gestores aceitaram a sua ideia, e com isso, você precisa implementar testes unitários no sistema.
+Para este desafio, usei meus conhecimentos adquiridos no módulo de Testes Unitários com C#, da trilha .NET da DIO.
 
 ## Premissas
 O sistema hoje possui dois projetos: um do tipo console, e um do tipo testes com **xUnit**. O projeto do tipo console possui duas classes em que são realizadas as lógicas principais: **ValidacoesLista** e **ValidacoesString**. Essas classes contém métodos em comum que são usados para realizar diversas validações em determinados cenários.
 
-O projeto de testes possui as classes de teste **ValidacoesListaTests** e **ValidacoesStringTests**, assim como seus métodos para validar o projeto do tipo console, porém estão incompletos. 
-
-O seu objetivo é implementar os métodos de testes contidos no projeto.
+O projeto de testes possui as classes de teste **ValidacoesListaTests** e **ValidacoesStringTests**, assim como seus métodos para validar o projeto do tipo console. 
 
 ## Projeto Console, suas classes e métodos
 
@@ -75,6 +66,7 @@ Classe responsável por realizar os testes da classe ValidacoesString.
 O projeto está estruturado da seguinte maneira:
 
 ![Métodos Swagger](Imagens/projeto.png)
+![Métodos Swagger](Imagens/Captura de tela de Tests.png)
 
 
 ## Solução
