@@ -2,70 +2,96 @@ using TestesUnitarios.Desafio.Console.Services;
 
 namespace TestesUnitarios.Desafio.Tests;
 
-public class ValidacoesStringTests
+public class ValidacoesListaTests
 {
-    private ValidacoesString _validacoes = new ValidacoesString();
+    private ValidacoesLista _validacoes = new ValidacoesLista();
+
+    [Theory]
+    [InlineData(new int[] { 5, -1, -8, 9}, new int[] { 5, 9 })]
+    public void DeveRemoverNumerosNegativosDeUmaLista(int[] numeros, int[] esperado)
+    {
+        // Act / Assert
+        Assert.Equal(esperado, _validacoes.RemoverNumerosNegativos(numeros.ToList()));
+    }
 
     [Fact]
-    public void DeveRetornar6QuantidadeCaracteresDaPalavraMatrix()
+    public void DeveConterONumero9NaLista()
     {
-        //TODO: Corrigir a variável "texto" e "resultadoEsperado" da seção Arrange
-
         // Arrange
-        var texto = "a";
-        var resultadoEsperado = 0;
+        var lista = new List<int> { 5, -1, -8, 9 };
+        var numeroParaProcurar = 9;
 
         // Act
-        var resultado = _validacoes.RetornarQuantidadeCaracteres(texto);
+        var resultado = _validacoes.ListaContemDeterminadoNumero(lista, numeroParaProcurar);
+
+        // Assert
+        Assert.True(resultado);
+    }
+
+    [Fact]
+    public void NaoDeveConterONumero10NaLista()
+    {
+        //TODO: Implementar método de teste
+
+        // Arrange
+        var lista = new List<int> { 5, -1, -8, 9 };
+        var numeroParaProcurar = 10;
+
+        // Act
+        var resultado = _validacoes.ListaContemDeterminadoNumero(lista, numeroParaProcurar);
+
+        // Assert
+        Assert.False(resultado);
+    }
+
+    //TODO: Corrigir a anotação [Fact]
+    [Fact]
+    public void DeveMultiplicarOsElementosDaListaPor2()
+    {
+        //TODO: Implementar método de teste
+
+        // Arrange
+        var lista = new List<int> { 5, 7, 8, 9 };
+        var resultadoEsperado = new List<int> { 10, 14, 16, 18 };
+        
+        // Act
+        var resultado = _validacoes.MultiplicarNumerosLista(lista, 2);
 
         // Assert
         Assert.Equal(resultadoEsperado, resultado);
     }
 
     [Fact]
-    public void DeveContemAPalavraQualquerNoTexto()
+    public void DeveRetornar9ComoMaiorNumeroDaLista()
     {
-        // Arrange
-        var texto = "Esse é um texto qualquer";
-        var textoProcurado = "qualquer";
+        //TODO: Implementar método de teste
 
-        //TODO: Corrigir a chamada do método "ContemCaractere" da seção Act
+        // Arrange
+        var lista = new List<int> { 5, -1, -8, 9 };
+        var resultadoEsperado = 9;
+
         // Act
-         _validacoes.ContemCaractere(texto, textoProcurado);
+        var resultado = _validacoes.RetornarMaiorNumeroLista(lista);
 
         // Assert
-        //TODO: Corrigir o Assert.True com base no retorno da chamada ao método
-        Assert.True(true);
+        //TODO: Corrigir o Assert.Equal com base no retorno da chamada ao método
+        Assert.Equal(resultadoEsperado, resultado);
     }
 
     [Fact]
-    public void NaoDeveConterAPalavraTesteNoTexto()
+    public void DeveRetornarOitoNegativoComoMenorNumeroDaLista()
     {
-        // Arrange
-        var texto = "Esse é um texto qualquer";
-        var textoProcurado = "teste";
-
-        // Act
-        var resultado = _validacoes.ContemCaractere(texto, textoProcurado);
-
-        // Assert
-        //TODO: Corrigir o Assert.False com base no retorno da chamada ao método
-        Assert.False(true);
-    }
-
-    //TODO: Corrigir a anotação [Fact]
-    public void TextoDeveTerminarComAPalavraProcurado()
-    {
-        //TODO: Corrigir a variável "textoProcurado" seção Arrange
+        //TODO: Implementar método de teste
 
         // Arrange
-        var texto = "Começo, meio e fim do texto procurado";
-        var textoProcurado = "teste";
+        var lista = new List<int> { 5, -1, -8, 9 };
+        var resultadoEsperado = -8;
 
         // Act
-        var resultado = _validacoes.TextoTerminaCom(texto, textoProcurado);
+        var resultado = _validacoes.RetornarMenorNumeroLista(lista);
 
         // Assert
-        Assert.True(resultado);
+        //TODO: Corrigir o Assert.Equal com base no retorno da chamada ao método
+        Assert.Equal(resultadoEsperado, resultado);
     }
 }
